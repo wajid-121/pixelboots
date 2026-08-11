@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 8%;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Services */
+
+        .services {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 38px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin: 15px 0;
+        }
+
+        /* About */
+
+        .about {
+            background: white;
+            padding: 80px 8%;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* Contact */
+
+        .contact {
+            padding: 80px 8%;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">MyWebsite</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>Create Beautiful Websites</h1>
+
+            <p>
+                Modern, responsive, and fast-loading websites that look amazing on desktop, tablet, and mobile devices.
+            </p>
+
+            <a href="#" class="btn">Get Started</a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900" alt="Website">
+        </div>
+
+    </section>
+
+    <section class="services">
+
+        <h2 class="title">Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Creative and modern UI/UX designs for every business.</p>
+            </div>
+
+            <div class="card">
+                <h3>Development</h3>
+                <p>Fast, responsive and SEO-friendly websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>Support</h3>
+                <p>24/7 maintenance and technical support.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="About">
+
+        <div class="about-text">
+
+            <h2>About Us</h2>
+
+            <br>
+
+            <p>
+                We build premium-quality websites using modern web technologies. Every website is optimized for speed,
+                mobile responsiveness, and user experience.
+            </p>
+
+            <br>
+
+            <a href="#" class="btn">Learn More</a>
+
+        </div>
+
+    </section>
+
+    <section class="contact">
+
+        <h2 class="title">Contact Us</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea rows="6" placeholder="Message"></textarea>
+
+            <button>Send Message</button>
+
+        </form>
+
+    </section>
+
+    <footer>
+
+        © 2026 MyWebsite. All Rights Reserved.
+
+    </footer>
+
+</body>
+
+</html>
